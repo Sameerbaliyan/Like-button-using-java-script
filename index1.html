@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/1ac4d96e28.js" crossorigin="anonymous"></script>
+    <style>
+        span{
+            margin-left: 35%;
+        }
+        span i{
+            padding: 30px;
+            margin-top: 5%;
+        }
+        #icon{
+            font-size: 32px;
+            cursor: pointer;
+        }
+        .far{
+            color: #999;
+        }
+        .fas{
+            color: #fd0031;
+        }
+        .fa-share{
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+       <span>
+        <i id="icon"  onclick="likeBtn()" class="far fa-heart"></i>
+         <i id="icon"  class="far fa-comment"></i>
+        <i id="icon"  class="fas fa-share"></i> 
+       </span>
+</body>
+<script>
+   
+   var btn = document.getElementById("icon");
+
+   function likeBtn(){
+       if(btn.classList.contains("far")){
+        btn.classList.remove("far")
+        btn.classList.add("fas")
+       }else{
+        btn.classList.remove("fas")
+        btn.classList.add("far")
+       }
+   }
+</script>
+</html>
